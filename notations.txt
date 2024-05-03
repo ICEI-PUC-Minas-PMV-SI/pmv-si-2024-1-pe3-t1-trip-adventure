@@ -1,0 +1,67 @@
+// TAD - USUÁRIO
+
+ID: number
+NOME: string
+SEXO: char
+CPF: string
+TELEFONE: string
+IDADE: number
+SENHA: string(md5)
+EMAIL: string(mail)
+ADM: char('S'||'N')
+TELEFONE: string
+
+// TAD - AVALIACAO
+
+ID: number
+ID_USUARIO: number
+ID_PUBLICACAO: number
+NOTA: number
+DESCRICAO: string
+
+// TAD - PONTUACAO
+
+ID: number
+ID_USUARIO: number
+VOTO: number(1||2) -- 1 para UP || 2 para DOWN
+
+// TAD - PUBLICACAO
+
+ID: number
+ID_ESTABELECIMENTO: number
+LATITUDE: float
+LONGITUDE: float
+CEP:
+NOME: string
+FOTOS: array[{mimetype: string, arquivo: base64}]
+DESCRICAO: string
+SERVIÇOS: array[number]
+
+// TAD - ESTABELECIMENTO
+ID: number
+ID_USUARIO: number
+CNPJ: string
+NOME: string
+LOGO: string
+CEP: string
+RUA: string
+BAIRRO: string
+NUMERO: number
+ES: string
+CIDADE: string
+COMPLEMENTO: string
+TELEFONE: string
+
+
+// TAD - DENUNCIA
+
+ID: number
+ID_PUBLICACAO: number
+ID_USUARIO: number
+DESCRICAO: string
+EVIDENCIA: {mimetype: string, arquivo: base64}
+
+// TAD - SERVICOS
+ID: number
+DESCRICAO: string
+ICONE: {mimetype: string, arquivo: base64}

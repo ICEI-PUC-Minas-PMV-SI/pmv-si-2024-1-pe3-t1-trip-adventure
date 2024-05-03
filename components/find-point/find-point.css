@@ -1,0 +1,213 @@
+#page-find-point {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+#page-find-point header {
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-find-point header a {
+  color: var(--title-color);
+  font-weight: bold;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-find-point header a svg {
+  margin-right: 16px;
+  color: var(--primary-color);
+}
+
+#page-find-point .filters{
+  margin: 10px auto;
+  /* margin-bottom: 10px; */
+  height: 70px;
+  padding: 20px;
+  padding-bottom: 20px;
+  max-width: 700px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+
+  input{
+    margin-left: 3px;
+    margin-right: 3px;
+
+  }
+  select{
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  
+
+  button{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+  }
+
+  input[type="text"]{
+
+  }
+}
+
+#page-find-point form {
+  margin: 20px auto;
+  height: 70vh;
+  padding: 30px;
+  max-width: 1400px;
+  background: #fff;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+  .map{
+    /* position: absolute; */
+    top: 0;
+    height: 100%;
+    width: 40%;
+    /* background-color: black; */
+  }
+
+
+  .cards:hover{
+    box-shadow: 0 3px 6px 0 rgba(51, 97, 125, 0.55);
+    border-color: rgba(51, 97, 125, 0.55);
+    transition: all 0.5s ease-out allow-discrete;
+  }
+
+  .cards{
+    /* background-color: blue; */
+    height: 200px;
+    /* min-height: 33%; */
+    /* max-height: 33%; */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.55);
+    cursor: pointer;
+    transition: all 0.5s ease-out allow-discrete;
+
+    img{
+      /* background-color: wheat; */
+      height: 100%;
+      width: 28%;
+      /* margin: 2px; */
+      border-radius: 5px;
+    }
+
+    .details{
+      /* background-color: wheat; */
+      height: 100%;
+      
+      width: 39%;
+      /* margin: 2px; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+
+      h5{
+        font-size: 19px;
+      }
+    }
+
+    .card-services{
+      height: 100%;
+      
+      width: 39%;
+      margin: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5px;
+
+    }
+
+    .services{
+      /* background-color: wheat; */
+      height: 100%;
+      /* width: 33%; */
+      margin: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px;
+
+      .good-service{
+        background-color: chartreuse;
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      .bad-service{
+        background-color: rgb(255, 115, 0);
+        width: 50px;
+        height: 50px;
+        border-radius: 13px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    }
+    
+    
+  }
+
+  .get-points{
+    width: 59%;
+    overflow-y: auto;
+    overflow-;
+
+  }
+}
+
+#page-find-point form h1 {
+  font-size: 36px;
+}
+
+#page-find-point form buttont {
+  width: 260px;
+  height: 56px;
+  background: var(--primary-color);
+  border-radius: 8px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  align-self: flex-end;
+  margin-top: 40px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
