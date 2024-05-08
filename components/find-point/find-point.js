@@ -50,3 +50,11 @@ $('.cards').click((x) => {
 
     
  }
+
+ $('.icon-expand').click((x) => {
+    $('.other_filters').css('display','flex');
+ });
+
+ $('.c-icon-close').click((x) => {
+    $('.other_filters').css('display','none');
+ });

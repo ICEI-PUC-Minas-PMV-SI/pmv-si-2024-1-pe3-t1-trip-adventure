@@ -28,25 +28,72 @@
 }
 
 #page-find-point .filters{
-  margin: 10px auto;
+  margin-top: 20px;
   /* margin-bottom: 10px; */
   height: 70px;
   padding: 20px;
   padding-bottom: 20px;
-  max-width: 700px;
-  background: #fff;
+  /* max-width: 700px; */
+  width: 350px;
+  background: #FFD0B2;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
+  
 
   input{
     margin-left: 3px;
     margin-right: 3px;
 
   }
+
+  .icon{
+    margin: auto;
+  }
+
+  .name{
+    width: 270px;
+  }
+
   select{
     margin-left: 3px;
     margin-right: 3px;
+  }
+
+  .other_filters{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    max-width: 300px;
+    justify-content: space-between;
+    /* padding-top: 300px; */
+    padding-left: 20px;
+    height: 100%;
+    background: #FFD0B2;
+    transition: all 0.5s fade-in allow-discrete;
+
+
+    .c-icon-close{
+      margin-left: 285px;
+      cursor: pointer;
+    }
+
+    .c-icon{
+      cursor: pointer;
+    }
+
+    input{
+      width: 80%;
+      margin: 40px;
+    }
+    select{
+      width: 80%;
+      margin: 40px;
+
+    }
   }
   
 
