@@ -50,6 +50,10 @@ function loadComponent(componentName) {
       case 'find-point':
         loadComponent('find-point');
         break;  
+
+      case 'user-painel':
+        loadComponent('user-painel');
+        break; 
       
       default:
         // Se a rota não for encontrada, redireciona para a página inicial

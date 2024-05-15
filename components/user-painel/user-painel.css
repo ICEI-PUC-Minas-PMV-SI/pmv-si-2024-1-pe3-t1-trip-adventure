@@ -1,0 +1,71 @@
+#page-create-point {
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  margin-top: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#page-create-point header a {
+  color: var(--title-color);
+  font-weight: bold;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+}
+
+#page-create-point header a svg {
+  margin-right: 16px;
+  color: var(--primary-color);
+}
+
+#page-create-point form {
+  margin: 80px auto;
+  padding: 30px;
+  max-width: 850px;
+  background: #fff;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.menu-login{
+  display: flex;
+  img{
+    width: 75px;
+    height: 75px;
+  }
+
+  .name{
+    font-size: 18px;
+    border-bottom: 3px solid gray;
+    margin-right:-3px;
+    padding-right: 10px;
+  }
+
+  .edit{
+    text-align: right;
+    cursor: pointer;
+  }
+
+  .logout{
+    text-align: right;
+    cursor: pointer;
+  }
+
+  .menu-login-options{
+    margin-right: 10px;
+    padding-right: 3px;
+    border-right: 3px solid gray;
+  }
+}
