@@ -6,7 +6,7 @@
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.173);
+    background-color: #ccecc6;
     background-blend-mode: lighten;
   }
   
@@ -68,7 +68,7 @@
     width: 100%;
     max-width: 360px;
     height: 72px;
-    background-color: #1c819b;;
+    background-color: #FF6200;;
     border-radius: 8px;
     text-decoration: none;
   
