@@ -51,6 +51,10 @@ function loadComponent(componentName) {
         loadComponent('find-point');
         break;  
 
+      case 'edit-user':
+        loadComponent('edit-user');
+        break; 
+
       case 'user-painel':
         loadComponent('user-painel');
         break; 
