@@ -70,3 +70,29 @@
     float: right;
   }
 }
+
+.menu-panel{
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  display: none;
+}
+
+.user-adm{
+  color: gold;
+  transition: color 200ms linear;
+}
+
+.user-adm:hover{
+  color: gray;
+}
+
+.common-user{
+  color: gray;
+  transition: color 200ms linear;
+}
+.common-user:hover{
+  color: gold;
+}

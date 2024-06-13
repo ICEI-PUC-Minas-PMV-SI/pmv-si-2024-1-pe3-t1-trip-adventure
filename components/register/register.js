@@ -53,10 +53,13 @@ document.querySelector('#btn-registro-pessoa').addEventListener('click', () => {
         "cpf":cpf,
         "idade":idade,
         "email":email,
-        "senha":senha
+        "senha":senha,
+        "adm": 'N'
     };
 
     createItem(obj, 'usuarios').then(items => {
       alert("Criado com sucesso");
+        window.location.hash = '#login';
+
       }).catch(error => console.error('Erro:', error));
 });

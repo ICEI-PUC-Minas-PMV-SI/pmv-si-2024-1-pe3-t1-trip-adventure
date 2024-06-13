@@ -1,65 +1,17 @@
-var map = L.map('map', {zoomControl: false}).setView([-21.5325519,-42.6479116,17], 19);
+var map = L.map('map').setView([-21.5325519,-42.6479116,17], 19);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 21,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var active_modals = []
-
-function clear_array(){
-    active_modals.forEach(modal => {
-        modal.style.display = 'none';
-    })
-    active_modals = []
-}
-
- $('.map').click((x) => {
-    console.log("Click");
-    clear_array()
- })
 
 $('.cards').click((x) => {
     let card = $(x.target).closest('.cards');
     let latd = card.find('#latitude').val();
     let long = card.find('#longitude').val();
-    map.flyTo(L.latLng(latd, long), 19, {duration: 1});
-    modal = card.find('.card-modal')[0];
-    //modal.style.display = 'flex';
-
-    //active_modals.push(modal);
-    console.log(active_modals)
-    if(!active_modals.includes(modal)){
-        clear_array()
-        setTimeout(() => {
-        modal.style.display = 'flex';
-        active_modals.push(modal);
-        }, 250)
-    }
+     map.flyTo(L.latLng(latd, long), 19);
  });
-
- $('#form-comment').submit((e) => {
-    e.target.parentNode.style.display = 'none';
-    e.preventDefault();
- });
-
-
-
- $('.make-comment').click((x) => {
-    $(document).find(".make-comment-form")[0].style.display = 'block'
- })
-
- $('.drop-comment').click((x) => {
-    console.log("click");
-    comment = $(x.target.parentNode).find('.comment')[0]
-    if (comment.style.display == 'block'){
-        comment.style.display = 'none'
-        x.target.innerHTML = "Comentários &#x25BC;"
-    } else{
-        comment.style.display = 'block'
-        x.target.innerHTML = "Comentários &#x25B2;"
-    }
- })
 
 
  loadMarkers()
@@ -81,8 +33,8 @@ $('.cards').click((x) => {
         var customPopup = L.popup({
             closeButton: false,
             minWidth: 200,
-            maxWidth: 1000,
-            maxHeight: 1000,
+            maxWidth: 400,
+            maxHeight: 200,
             autoClose: true,
             closeOnEscapeKey: false,
             className: 'item'

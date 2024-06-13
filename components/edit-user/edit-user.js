@@ -1,4 +1,4 @@
-document.querySelector('#btn-registro-pessoa').addEventListener('click', () => {
+document.querySelector('#btn-edit-pessoa').addEventListener('click', () => {
     var flag = true;
     document.getElementById("senha").style.borderColor = '';
     document.getElementById("confirmarsenha").style.borderColor = '';
@@ -56,7 +56,7 @@ document.querySelector('#btn-registro-pessoa').addEventListener('click', () => {
         "senha":senha
     };
 
-    createItem(obj, 'usuarios').then(items => {
-      alert("Criado com sucesso");
-      }).catch(error => console.error('Erro:', error));
+    // updateItem('usuarios',id , obj).then(items => {
+    //     console.log(items);
+    // }).catch(error => console.error('Erro:', error));
 });

@@ -4,8 +4,8 @@
     <div class="menu-login">
       <div class="menu-login-options">
         <p class="name">User Teste</p>
-        <p class="edit"><a href="#edit-user">Editar</p><br/>
-        <p class="logout">Sair</p>
+        <p class="edit"><a class="edit" href="#edit-user">Editar</a></p><br/>
+        <p class="logout" id="logout">Sair</p>
       </div>
       <img src="files/login-icon.png" alt="Icone">
 
@@ -26,23 +26,24 @@
     <!-- O clique do botão vai ditar qual desses lugares será carregado pelo JS. Para teste, quando fizer o html, coloque como display="none" para desaparecer com a div toda -->
 
     <!-- Colocar aqui o HTML do design dos locais que esse user add -->
-    <div class="row" id="my-places">
+    <div class="menu-panel"  id="my-places">
     </div>
 
     <!-- Colocar aqui o HTML do design das debuncias que esse user add -->
-    <div class="row" id="my-reports">
+    <div class="menu-panel"  id="my-reports">
     </div>
 
     <!-- Colocar aqui o HTML do design dos usuários gerais do sistema pois ele é adm -->
-    <div class="row" id="system-users">
+    <div class="menu-panel" id="system-users">
+      
     </div>
 
     <!-- Colocar aqui o HTML do design das denuncias gerais do sistema pois ele é adm -->
-    <div class="row" id="system-reports">
+    <div class="menu-panel" id="system-reports">
     </div>
 
     <!-- Colocar aqui o HTML do design de todos os locais cadastrados do sistema pois ele é adm -->
-    <div class="row" id="system-places">
+    <div class="menu-panel" id="system-places">
     </div>
 
   </form>

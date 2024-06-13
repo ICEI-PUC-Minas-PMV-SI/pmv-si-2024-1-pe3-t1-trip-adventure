@@ -106,8 +106,8 @@ function loadComponent(componentName) {
   }
   
   // busca apenas um pelo id
-  async function getItemById(itemId) {
-    const response = await fetch(`${API_URL}/${itemId}`);
+  async function getItemById(rota, itemId) {
+    const response = await fetch(`${API_URL}/${rota}?${itemId}`);
     
     if (!response.ok) {
       throw new Error('Erro na busca');
@@ -117,15 +117,15 @@ function loadComponent(componentName) {
   }
   
   // Atualiza
-  async function updateItem(itemId, itemData) {
-    const response = await fetch(`${API_URL}/${itemId}`, {
+  async function updateItem(rota,itemId, itemData) {
+    const response = await fetch(`http://localhost:3000/${rota}/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(itemData),
     });
-    
+      console.log( response);
     if (!response.ok) {
       throw new Error('Erro na atualização');
     }
