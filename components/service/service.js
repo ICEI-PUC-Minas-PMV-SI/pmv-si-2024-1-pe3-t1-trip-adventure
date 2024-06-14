@@ -12,7 +12,7 @@ getItems('services').then(items => {
     var content = '';
     console.log(items);
     items.forEach((element) => {
-        content += '<div class="col-md-2 mt-2 mb-2 mr-2 ml-2 service services"><i id="'+element.id+'" class="'+element.link+'" aria-hidden="true"></i></div>;'
+        content += '<div class="col-md-2 mt-2 mb-2 mr-2 ml-2 service services"><i id="'+element.id+'" class="'+element.link+'" aria-hidden="true"></i></div>'
         });
     $('#services').html(content);
 

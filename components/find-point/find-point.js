@@ -106,3 +106,13 @@ $('.cards').click((x) => {
  $('.c-icon-close').click((x) => {
     $('.other_filters').css('display','none');
  });
+
+ getItems('services').then(items => {
+    $('#filter-2').html('');
+    var content = '';
+    console.log(items);
+    items.forEach((element) => {
+        content += '<option value="'+element.id+'">'+element.titulo+'</option>'
+        });
+    $('#filter-2').html(content);
+})
