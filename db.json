@@ -20,5 +20,32 @@
       "senha": "123",
       "adm": "N"
     }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "titulo": "Água",
+      "link": "fa fa-tint"
+    },
+    {
+      "id": "2",
+      "titulo": "Sombra",
+      "link": "fa fa-tree"
+    },
+    {
+      "id": "3",
+      "titulo": "Custo",
+      "link": "fa fa-money"
+    },
+    {
+      "id": "4",
+      "titulo": "Barulho",
+      "link": "fa fa-volume-up"
+    },
+    {
+      "id": "5",
+      "titulo": "Comida",
+      "link": "fa fa-cutlery"
+    }
   ]
 }
