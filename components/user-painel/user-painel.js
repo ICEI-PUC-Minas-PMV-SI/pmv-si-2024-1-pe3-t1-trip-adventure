@@ -1,3 +1,24 @@
+document.querySelector('#btn-system-services').addEventListener('click', () => {
+
+    getItems('services').then(items => {
+        $('#system-services').html();
+        $('#system-services').css('display','block');
+        var content = '';
+        console.log(items);
+        items.forEach((element) => {
+                    content += "<div class='row'>";
+                    content +=    "<div class='col col-md-1' id='service-id'>#"+element.id+"</div>";
+                    content +=    "<div class='col col-md-6' id='service-tittle'>"+element.titulo+"</div>";
+                    content +=    "<div class='col col-md-2' id='service-link'>"+element.link+"</div>";
+                    // content +=    "<div class='col col-md-2' id='service-link'>"+element.cpf+"</div>";
+                    content +=    "</div>";
+            });
+        $('#system-services').html(content);
+
+        // loadjsbuttons();
+    });
+});
+
 document.querySelector('#btn-system-users').addEventListener('click', () => {
 
     getItems('usuarios').then(items => {

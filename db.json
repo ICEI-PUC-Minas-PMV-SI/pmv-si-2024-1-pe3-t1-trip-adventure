@@ -47,5 +47,27 @@
       "titulo": "Comida",
       "link": "fa fa-cutlery"
     }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "titulo": "Praça"
+    },
+    {
+      "id": "2",
+      "titulo": "Praia"
+    },
+    {
+      "id": "3",
+      "titulo": "Cachoeira"
+    },
+    {
+      "id": "4",
+      "titulo": "Igreja"
+    },
+    {
+      "id": "5",
+      "titulo": "Montanha"
+    }
   ]
 }

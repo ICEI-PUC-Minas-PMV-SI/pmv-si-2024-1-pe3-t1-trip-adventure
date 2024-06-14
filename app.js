@@ -58,6 +58,10 @@ function loadComponent(componentName) {
       case 'user-painel':
         loadComponent('user-painel');
         break; 
+
+      case 'service':
+        loadComponent('service');
+        break; 
       
       default:
         // Se a rota não for encontrada, redireciona para a página inicial
