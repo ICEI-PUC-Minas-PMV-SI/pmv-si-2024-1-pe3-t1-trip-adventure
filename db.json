@@ -69,5 +69,111 @@
       "id": "5",
       "titulo": "Montanha"
     }
+  ],
+  "point": [
+    {
+      "id": "f7b0",
+      "idUsuario": "1",
+      "title": "Teste",
+      "link": "Teste",
+      "idCategory": "1",
+      "latitude": "-21.532844977829537",
+      "longitude": "-42.64835715293885",
+      "cep": "36707020",
+      "street": "Rua Sebastião Ferreira Lacerda",
+      "num": "110",
+      "neight": "Eldorado",
+      "city": "Leopoldina",
+      "uf": "MG",
+      "services": [
+        {
+          "idService": "1",
+          "quality": "good"
+        },
+        {
+          "idService": "2",
+          "quality": "good"
+        },
+        {
+          "idService": "3",
+          "quality": "good"
+        },
+        {
+          "idService": "4",
+          "quality": "good"
+        },
+        {
+          "idService": "5",
+          "quality": "good"
+        }
+      ],
+      "comments": [],
+      "complaints": [],
+      "assessments": []
+    },
+    {
+      "id": "d44d",
+      "idUsuario": "1",
+      "title": "Teste",
+      "link": "teste",
+      "idCategory": "2",
+      "latitude": "-21.532736860720476",
+      "longitude": "-42.647697329521186",
+      "cep": "36707020",
+      "street": "Rua Sebastião Ferreira Lacerda",
+      "num": "110",
+      "neight": "Eldorado",
+      "city": "Leopoldina",
+      "uf": "MG",
+      "services": [
+        {
+          "idService": "1",
+          "quality": "good"
+        },
+        {
+          "idService": "2",
+          "quality": "good"
+        },
+        {
+          "idService": "3",
+          "quality": "good"
+        },
+        {
+          "idService": "4",
+          "quality": "good"
+        },
+        {
+          "idService": "5",
+          "quality": "good"
+        }
+      ],
+      "comments": [],
+      "complaints": [],
+      "assessments": []
+    },
+    {
+      "id": "c301",
+      "idUsuario": "1",
+      "title": "TeaSDASD",
+      "link": "Teste",
+      "idCategory": "3",
+      "latitude": "-21.532449934021404",
+      "longitude": "-42.648271322250366",
+      "cep": "36707020",
+      "street": "Rua Sebastião Ferreira Lacerda",
+      "num": "110",
+      "neight": "Eldorado",
+      "city": "Leopoldina",
+      "uf": "MG",
+      "services": [
+        {
+          "idService": "4",
+          "quality": "good"
+        }
+      ],
+      "comments": [],
+      "complaints": [],
+      "assessments": []
+    }
   ]
 }

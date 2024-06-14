@@ -7,6 +7,27 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
+var singleMarker;
+
+// Adiciona um evento de clique ao mapa
+map.on('click', function(e) {
+var lat = e.latlng.lat;
+var lng = e.latlng.lng;
+
+$('#latitude').val(lat);
+$('#longitude').val(lng);
+
+// Remove o marcador anterior, se existir
+if (singleMarker) {
+    map.removeLayer(singleMarker);
+}
+
+// Adiciona um novo marcador no local clicado
+singleMarker = L.marker([lat, lng]).addTo(map)
+    .bindPopup('Marcador adicionado em:<br> Latitude: ' + lat + '<br> Longitude: ' + lng)
+    .openPopup();
+});
+
 getItems('services').then(items => {
     $('#services').html('');
     var content = '';
@@ -23,10 +44,13 @@ getItems('services').then(items => {
         
         if (element.hasClass('service')) {
             element.removeClass('service').addClass('good-service');
+            element.removeAttr('service').attr('service','good');
         } else if (element.hasClass('good-service')) {
             element.removeClass('good-service').addClass('bad-service');
+            element.removeAttr('service').attr('service','bad');
         } else if (element.hasClass('bad-service')) {
             element.removeClass('bad-service').addClass('service');
+            element.removeAttr('service');
         }
     });
 });
@@ -91,3 +115,86 @@ $("#cep").blur(function() {
         limpa_formulário_cep();
     }
 });
+
+function validacoes(){
+    var retorno = false;
+
+    $('input').each(function() {
+        if ($(this).val() === '') {
+            $(this).addClass('error-border');
+            retorno = true;
+        } else {
+            $(this).removeClass('error-border');
+        }
+    });
+
+    if($('#latitude').val() == ''){
+        $('#markerMapH3').addClass('error-text');
+        return true;
+    }else{
+        $('#markerMapH3').removeClass('error-text');
+    }
+
+    return retorno;
+}
+
+document.querySelector('#btn-cadastro').addEventListener('click', () => {
+    var validador =  validacoes();
+
+    if(validador) return false;
+
+    var objFinal = {};
+    var user = JSON.parse(localStorage.getItem('logado'));
+
+    var fileInput = $('#inputGroupFile04')[0];
+    if (fileInput.files.length > 0) {
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var base64String = e.target.result;
+
+            objFinal.logo = base64String;
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        alert('Por favor, selecione um arquivo primeiro.');
+        return false;
+    }
+
+    objFinal.idUsuario = user.id;
+    objFinal.title = $('#title').val();
+    objFinal.link = $('#link').val();
+    objFinal.idCategory = $('#category').val();
+    objFinal.latitude = $('#latitude').val();
+    objFinal.longitude = $('#longitude').val();
+
+    objFinal.cep = $('#cep').val();
+    objFinal.street = $('#street').val();
+    objFinal.num = $('#num').val();
+    objFinal.neight = $('#neight').val();
+    objFinal.city = $('#city').val();
+    objFinal.uf = $('#uf').val();
+
+    objFinal.services = [];
+
+    goodAndBadServices = $('.good-service, .bad-service');
+    goodAndBadServices.each(function() {
+        var id =  $(this).find('i').attr('id');
+        var service = $(this).attr('service');
+        objFinal.services.push({idService: id, quality: service})
+    });
+
+    objFinal.comments = [];
+    objFinal.complaints = [];
+    objFinal.assessments = [];
+
+    console.log(objFinal);
+
+    createItem(objFinal, 'point').then(items => {
+            alert("Criado com sucesso");
+            // window.location.hash = '#user-painel';
+  
+        }).catch(error => console.error('Erro:', error));
+})

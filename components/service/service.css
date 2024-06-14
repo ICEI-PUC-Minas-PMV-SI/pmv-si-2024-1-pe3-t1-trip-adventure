@@ -75,3 +75,11 @@
   justify-content: center;
   display: flex;
 }
+
+.error-border{
+  border: 1px solid red;
+}
+
+.error-text{
+  color: red;
+}

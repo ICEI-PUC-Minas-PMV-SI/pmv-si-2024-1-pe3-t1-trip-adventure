@@ -18,7 +18,7 @@
                 </div>
                 <div class="col col-md-4">
                     <label for="tiitle">Link da Página</label>
-                    <input type="text" name="title" id="title" class="form-control">
+                    <input type="text" name="link" id="link" class="form-control">
                 </div>
                 <div class="col col-md-4">
                     <label for="tiitle">Categoria</label>
@@ -46,7 +46,7 @@
         </div>
   
         <div class="container mt-5">
-            <h3>Marque no mapa</h3>
+            <h3 id="markerMapH3">Marque no mapa</h3>
             <div class="map mb-5" id="map"></div>
             <h3 class="mt-5">Endereço do local</h3>
 
@@ -86,6 +86,9 @@
                 
             </div>
         </div>
-        <input type="button" value="Cadastrar" class="btn btn-primary mt-3">
+        <input type="button" id="btn-cadastro" value="Cadastrar" class="btn btn-primary mt-3">
+
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
     </form>
   </div>
