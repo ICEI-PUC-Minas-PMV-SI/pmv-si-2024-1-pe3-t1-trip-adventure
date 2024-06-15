@@ -1,10 +1,12 @@
+if(!verificaLogin()) window.location.hash = 'login';
+
 document.querySelector('#btn-system-services').addEventListener('click', () => {
+    limpaTable();
 
     getItems('services').then(items => {
         $('#system-services').html();
         $('#system-services').css('display','block');
         var content = '';
-        console.log(items);
         items.forEach((element) => {
                     content += "<div class='row'>";
                     content +=    "<div class='col col-md-1' id='service-id'>#"+element.id+"</div>";
@@ -20,12 +22,12 @@ document.querySelector('#btn-system-services').addEventListener('click', () => {
 });
 
 document.querySelector('#btn-system-users').addEventListener('click', () => {
+    limpaTable();
 
     getItems('usuarios').then(items => {
         $('#system-users').html();
         $('#system-users').css('display','block');
         var content = '';
-        console.log(items);
         items.forEach((element) => {
                     content += "<div class='row'>";
                     content +=    "<div class='col col-md-1' id='user-id'>#"+element.id+"</div>";
@@ -47,7 +49,14 @@ document.querySelector('#btn-system-users').addEventListener('click', () => {
 
 document.querySelector('#logout').addEventListener('click', () => {
     localStorage.removeItem('logado');
-    alert("Deslogado com sucesso");
+    Toastify({
+        text: "Deslogado com sucesso",
+        duration: 3000,  // Duração em milissegundos
+        close: true,  // Botão de fechar
+        gravity: "top",  // Posição: "top" ou "bottom"
+        position: "right",  // Posição: "left", "center" ou "right"
+        backgroundColor: "#4CAF50",  // Cor de fundo
+    }).showToast();
     // verificaLogin();
     window.location.hash = '#';
   });
@@ -73,13 +82,31 @@ function loadjsbuttons(){
                     "adm": adm
                 };
 
-                updateItem('usuarios',id , obj).then(items => {
-                    console.log(items);
-                }).catch(error => console.error('Erro:', error));
+                updateItem('usuarios',id , obj).then(() => 
+                    Toastify({
+                        text: "Atualizado com sucesso",
+                        duration: 3000,  // Duração em milissegundos
+                        close: true,  // Botão de fechar
+                        gravity: "top",  // Posição: "top" ou "bottom"
+                        position: "right",  // Posição: "left", "center" ou "right"
+                        backgroundColor: "#4CAF50",  // Cor de fundo
+                    }).showToast()
+                    
+                ).catch(error => console.error('Erro:', error));
         
             });
 
         });
     });
 
+}
+
+function limpaTable(){
+
+    $('#my-places').html(null).css('display','none');
+    $('#my-reports').html(null).css('display','none');
+    $('#system-users').html(null).css('display','none');
+    $('#system-reports').html(null).css('display','none');
+    $('#system-places').html(null).css('display','none');
+    $('#system-services').html(null).css('display','none');
 }

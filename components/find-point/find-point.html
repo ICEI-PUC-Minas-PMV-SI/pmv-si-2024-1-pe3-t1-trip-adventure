@@ -1,271 +1,262 @@
 <div id="page-find-point">
-  <!--
-  <header>
-    <img src="files/logo.svg" alt="" srcset="">
-    <Link to="/">
-      <a href="#">
-      Voltar para home</a>
-    </Link>
-  </header>
--->
 
-<!--
-  <div class="filters">
-    <input type="text" class="form-control name" name="filter1" id="filter1">
+  <div class="container-fluid vh">
+      <div class="row vh">
+        <div class="col col-md-2 nob nop ">
+          <div class="get-points">
+            <div class="cards">
+              <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""> -->
+              <div class="details">
+                <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
+                <div class="adress">
+                  <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
+                  <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
+                  <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
+                  <p>
+                    <span id="ranking">
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
+                    <span id="category" class="ml-2">Igreja</span>
+                  </p>
+                  <input type="hidden" name="hidden" id="latitude" value="-21.5325519">
+                  <input type="hidden" name="hidden" id="longitude" value="-41.6479116">
+                </div>
+              </div>
+              
+            </div>
+            <div class="cards">
+              <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""> -->
+              <div class="details">
+                <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
+                <div class="adress">
+                  <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
+                  <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
+                  <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
+                  <p>
+                    <span id="ranking">
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
+                    <span id="category" class="ml-2">Igreja</span>
+                  </p>
+                  <input type="hidden" name="hidden" id="latitude" value="-21.5325519">
+                  <input type="hidden" name="hidden" id="longitude" value="-41.6479116">
+                </div>
+              </div>
+              
+            </div>
+    
+          </div>
+        </div>
+        <div class="col col-md-2 nob nop boxShadow show hide" id="toggle">
+          <div class="row">
+            <div class="col col-md-12">
+                <div class="logo"><img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""></div>
+            </div>
+            <div class="col col-md-12 ml-2 c-details">
+              <div class="detail-details">
+                <h5 id="detail-name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
+                <div class="detail-adress">
+                  <p><span id="detail-city">Leopoldina</span>,<span id="detail-complement">MG</span></p>
+                  <p><span id="detail-street">Rua Teste do Teste</span>,<span id="detail-number">123</span></p>
+                  <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
+                  <p>
+                    <span id="detail-ranking">
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                    </span>
+                    <span id="detail-category" class="ml-2">Igreja</span>
+                  </p>
+                  <input type="hidden" name="hidden" id="detail-latitude" value="-21.5325519">
+                  <input type="hidden" name="hidden" id="detail-longitude" value="-41.6479116">
+                </div>
+              </div>
+            </div>
 
-    <div class="other_filters" style="display: none;">
-      <i class="fa fa-times fa-2x c-icon-close" aria-hidden="true"></i>
-      <div class="filter_inputs">
-        <select class="form-control" name="filter2" id="filter2">
-          <option value="1">Teste 1</option>
-          <option value="2">Teste 2</option>
-          <option value="3">Teste 3</option>
-        </select>
-        <select class="form-control" name="filter3" id="filter3">
-          <option value="1">Teste 1</option>
-          <option value="2">Teste 2</option>
-          <option value="3">Teste 3</option>
-        </select>
-        <select class="form-control" name="filter4" id="filter4">
-          <option value="1">Teste 1</option>
-          <option value="2">Teste 2</option>
-          <option value="3">Teste 3</option>
-        </select>
+            <div class="col col-md-12 ml-2 c-details">
+              <div class="container detail-services">
+                  <div class="row"><h3>Servicos</h3></div>
+                  <div class="row" id="detail-services">
+                    <div class="col-md-3 mt-2 mb-2 mr-2 ml-2 service services"><i id="" class="" aria-hidden="true"></i></div>
+                    <div class="col-md-3 mt-2 mb-2 mr-2 ml-2 service services"><i id="" class="" aria-hidden="true"></i></div>
+                    <div class="col-md-3 mt-2 mb-2 mr-2 ml-2 service services"><i id="" class="" aria-hidden="true"></i></div>
+                    <div class="col-md-3 mt-2 mb-2 mr-2 ml-2 service services"><i id="" class="" aria-hidden="true"></i></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col col-md-12">
+              <div id="accordion" class="ml-2">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h3>Comentários</h3>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col col-md-9">
+                          Usuário 1
+                        </div>
+                        <div class="col col-md-3">
+                          Denunciar
+                        </div>
+                        <div class="col col-md-12">
+                          Gostei muito desse lugar
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="col col-md-9">
+                          Usuário 1
+                        </div>
+                        <div class="col col-md-3">
+                          Denunciar
+                        </div>
+                        <div class="col col-md-12">
+                          Gostei muito desse lugar
+                        </div>
+                      </div>
+
+                      <button class="btn btn-secondary add-new" type="button" data-toggle="modal" data-target="#newComment">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar Comentário
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="col col-md-12">
+              <div id="accordion" class="ml-2">
+                <div class="card">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSecond" aria-expanded="true" aria-controls="collapseOne">
+                        <h3>Avaliações</h3>
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseSecond" class="collapse" aria-labelledby="headingSecond" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col col-md-9">
+                          Usuário 1
+                        </div>
+                        <div class="col col-md-3">
+                          Denunciar
+                        </div>
+                        <div class="col col-md-12">
+                          Gostei muito desse lugar
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="col col-md-9">
+                          Usuário 1
+                        </div>
+                        <div class="col col-md-3">
+                          Denunciar
+                        </div>
+                        <div class="col col-md-12">
+                          Gostei muito desse lugar
+                        </div>
+                      </div>
+                      <button class="btn btn-secondary add-new" type="button" data-toggle="modal" data-target="#newAssessment">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Adicionar Avaliação
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col col-md-10 nob nop">
+          <div class="map" id="map"></div>
+        </div>
       </div>
-      <input type="text" class="form-control">
-    </div>
-    <i class="fa fa-search fa-2x icon" aria-hidden="true"></i>
-    <i class="fa fa-expand fa-2x icon-expand ml-2" aria-hidden="true"></i>
   </div>
--->
-  <a class="go-back" href="index.html"> <- Voltar</a>
-  <div class="make-comment-form">
-    <form id="form-comment">
-      <h3>Comente!</h3>
-      <input type="text"/>
-      <input type="submit" value="Publicar!">
-    </form>
 
-  </div>
-  <form>
-    <input id="search" type="search"/>
-    <select id="filter-2">
 
-    </select>
-    <select id="filter-3">
-      <option value="1">Filtro 1</option>
-      <option value="2">Filtro 2</option>
-      <option value="3">Filtro 3</option>
-      <option value="4">Filtro 4</option>
-    </select>
-    <select id="filter-4">
-      <option value="1">Filtro 1</option>
-      <option value="2">Filtro 2</option>
-      <option value="3">Filtro 3</option>
-      <option value="4">Filtro 4</option>
-    </select>
-    <div class="get-points">
-      <div class="cards">
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""> -->
-        <div class="details">
-          <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-            <input type="hidden" name="hidden" id="latitude" value="-21.5325519">
-            <input type="hidden" name="hidden" id="longitude" value="-41.6479116">
-          </div>
-          <!-- <button type="button" class="btn btn-secondary">Ver Avaliações</button> -->
-        </div>
-        <div class="card-modal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt="">
-          <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-          </div>
-            <button class="drop-comment">Comentários &#x25BC;</button>
-              <div class="comment">
-              <button class="make-comment">Comentar</button>
-                <h6>Usuario 1</h6> <button class="report">Denunciar</button><p>Gostei bastante desse lugar!</p>
-                <h6>Usuario 2</h6><button class="report">Denunciar</button><p>Muito RUIM! HORRIVEL!</p>
-              </div>
-            <div>Avaliações</div>
-            <div>Avaliar</div>
-        </div>
-        <!--
-        <div class="card-services">
-          <h5>Serviços</h5>
-          <div class="services">
-            <div class="good-service"><i class="fa fa-tree" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-money" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-          </div>
-        </div>
-      -->
+
+<!-- Modal  Avaliação-->
+<div class="modal fade" id="newAssessment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-
-      <div class="cards">
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""> -->
-        <div class="details">
-          <h5 id="name">Catedral de St Sebastião</h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-            <input type="hidden" name="hidden" id="latitude" value="-21.5325519">
-            <input type="hidden" name="hidden" id="longitude" value="-42.6479116">
-          </div>
-          <!-- <button type="button" class="btn btn-secondary">Ver Avaliações</button> -->
-        </div>
-        <div class="card-modal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt="">
-          <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-          </div>
-            <button class="drop-comment">Comentários &#x25BC;</button>
-              <div class="comment">
-              <button class="make-comment">Comentar</button>
-                <h6>Usuario 1</h6><button class="report">Denunciar</button><p>Gostei bastante desse lugar!</p>
-                <h6>Usuario 2</h6><button class="report">Denunciar</button><p>Muito RUIM! HORRIVEL!</p>
-              </div>
-            <div>Avaliações</div>
-            <div>Avaliar</div>
-        </div>
-        <!--
-        <div class="card-services">
-          <h5>Serviços</h5>
-          <div class="services">
-            <div class="good-service"><i class="fa fa-tree" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-money" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-          </div>
-        </div>
-      -->
+      <div class="modal-body">
+        ...
       </div>
-
-      <div class="cards">
-        <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt=""> -->
-        <div class="details">
-          <h5 id="name">Catedral de St Sebastião</h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-            <input type="hidden" name="hidden" id="latitude" value="-21.5325519">
-            <input type="hidden" name="hidden" id="longitude" value="-40.6479116">
-          </div>
-          <!-- <button type="button" class="btn btn-secondary">Ver Avaliações</button> -->
-        </div>
-        <div class="card-modal">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Catedral_Leop1.jpg/300px-Catedral_Leop1.jpg" alt="">
-          <h5 id="name"><a target="_blank" href="https://dioceseleopoldina.com.br/paroquia-da-catedral-de-sao-sebastiao/">Catedral de St Sebastião</a></h5>
-          <div class="adress">
-            <p><span id="city">Leopoldina</span>,<span id="complement">MG</span></p>
-            <p><span id="street">Rua Teste do Teste</span>,<span id="number">123</span></p>
-            <!-- <p><span id="neighborhood">Centro da Cidade</span>,<span id="complement">Centro</span></p> -->
-            <p>
-              <span id="ranking">
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" style="color: gold;" aria-hidden="true"></i>
-                <i class="fa fa-star" aria-hidden="true"></i>
-              </span>
-              <span id="category" class="ml-2">Igreja</span>
-            </p>
-          </div>
-            <button class="drop-comment">Comentários &#x25BC;</button>
-              <div class="comment">
-              <button class="make-comment">Comentar</button>
-                <h6>Usuario 1</h6><button class="report">Denunciar</button><p>Gostei bastante desse lugar!</p>
-                <h6>Usuario 2</h6><button class="report">Denunciar</button><p>Muito RUIM! HORRIVEL!</p>
-              </div>
-            <div>Avaliações</div>
-            <div>Avaliar</div>
-        </div>
-        <!--
-        <div class="card-services">
-          <h5>Serviços</h5>
-          <div class="services">
-            <div class="good-service"><i class="fa fa-tree" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-money" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-volume-up" aria-hidden="true"></i></div>
-            <div class="good-service"><i class="fa fa-thermometer-full" aria-hidden="true"></i></div>
-            <div class="bad-service"><i class="fa fa-tint" aria-hidden="true"></i></div>
-          </div>
-        </div>
-      -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
-    <div class="map" id="map"></div>
-  </form>
+  </div>
 </div>
+
+<!-- Modal  Comentário-->
+<div class="modal fade" id="newComment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal  Denuncia-->
+<div class="modal fade" id="newComplain" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

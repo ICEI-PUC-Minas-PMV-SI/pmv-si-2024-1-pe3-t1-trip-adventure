@@ -1,4 +1,4 @@
-
+if(!verificaLogin()) window.location.hash = 'login';
 
 var map = L.map('map', {zoomControl: false}).setView([-21.5325519,-42.6479116,17], 19);
 
@@ -141,7 +141,17 @@ function validacoes(){
 document.querySelector('#btn-cadastro').addEventListener('click', () => {
     var validador =  validacoes();
 
-    if(validador) return false;
+    if(validador){
+        Toastify({
+            text: "Campos não preenchidos",
+            duration: 3000,  // Duração em milissegundos
+            close: true,  // Botão de fechar
+            gravity: "top",  // Posição: "top" ou "bottom"
+            position: "right",  // Posição: "left", "center" ou "right"
+            backgroundColor: "#cc4a4a",  // Cor de fundo
+        }).showToast();
+        return false;
+    }
 
     var objFinal = {};
     var user = JSON.parse(localStorage.getItem('logado'));
@@ -193,8 +203,16 @@ document.querySelector('#btn-cadastro').addEventListener('click', () => {
     console.log(objFinal);
 
     createItem(objFinal, 'point').then(items => {
-            alert("Criado com sucesso");
-            // window.location.hash = '#user-painel';
+        Toastify({
+            text: "Criado com sucesso",
+            duration: 3000,  // Duração em milissegundos
+            close: true,  // Botão de fechar
+            gravity: "top",  // Posição: "top" ou "bottom"
+            position: "right",  // Posição: "left", "center" ou "right"
+            backgroundColor: "#4CAF50",  // Cor de fundo
+        }).showToast();
+
+        window.location.hash = '#user-painel';
   
         }).catch(error => console.error('Erro:', error));
 })

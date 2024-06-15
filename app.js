@@ -18,7 +18,6 @@ function loadComponent(componentName) {
         const style = document.createElement('link');
         style.rel = 'stylesheet';
         style.href = stylePath;
-        console.log(style);
         document.head.appendChild(style);
 
         content.innerHTML = html;
@@ -61,6 +60,10 @@ function loadComponent(componentName) {
 
       case 'service':
         loadComponent('service');
+        break; 
+
+      case 'reference':
+        loadComponent('reference');
         break; 
       
       default:
@@ -111,7 +114,7 @@ function loadComponent(componentName) {
   
   // busca apenas um pelo id
   async function getItemById(rota, itemId) {
-    const response = await fetch(`${API_URL}/${rota}?${itemId}`);
+    const response = await fetch(`${API_URL}/${rota}?id=${itemId}`);
     
     if (!response.ok) {
       throw new Error('Erro na busca');
@@ -129,7 +132,6 @@ function loadComponent(componentName) {
       },
       body: JSON.stringify(itemData),
     });
-      console.log( response);
     if (!response.ok) {
       throw new Error('Erro na atualização');
     }
@@ -186,24 +188,10 @@ function loadComponent(componentName) {
 
   function verificaLogin(){
     var usuario = JSON.parse(localStorage.getItem("logado"));
-    var loginButton = document.getElementById('loginButton');
-    var loginContainer = document.getElementById('loginContainer');
-    var loggedInUsername = document.getElementById('loggedInUsername');
-    var logoutButton = document.getElementById('logoutButton');
-    var logoutDropdown = document.getElementById('logoutDropdown');
   
     if (usuario) {
-      loginButton.style.display = 'none';
-      loggedInUsername.textContent = usuario.nome;
-      loginContainer.classList.add('dropdown');
-      logoutDropdown.style.display = '';
-      logoutButton.style.display = 'block';
-
+      return true;
     } else {
-      loginButton.style.display = 'block';
-      loggedInUsername.textContent = '';
-      loginContainer.classList.remove('dropdown');
-      logoutButton.style.display = 'none';
-      logoutDropdown.style.display = 'none';
+      return false;
     }
   }

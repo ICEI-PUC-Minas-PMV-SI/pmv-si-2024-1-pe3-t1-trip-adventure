@@ -19,16 +19,23 @@ function clear_array(){
     clear_array()
  })
 
-$('.cards').hover((x) => {
+$('.cards').click((x) => {
     let card = $(x.target).closest('.cards');
     let latd = card.find('#latitude').val();
     let long = card.find('#longitude').val();
     map.flyTo(L.latLng(latd, long), 19, {duration: 1});
+    modal = card.find('.card-modal')[0];
+    //modal.style.display = 'flex';
 
- });
-
- $('.cards').click((x) => {
-    document.getElementById('toggle').classList.toggle('hide');
+    //active_modals.push(modal);
+    console.log(active_modals)
+    if(!active_modals.includes(modal)){
+        clear_array()
+        setTimeout(() => {
+        modal.style.display = 'flex';
+        active_modals.push(modal);
+        }, 250)
+    }
  });
 
  $('#form-comment').submit((e) => {
@@ -38,21 +45,21 @@ $('.cards').hover((x) => {
 
 
 
-//  $('.make-comment').click((x) => {
-//     $(document).find(".make-comment-form")[0].style.display = 'block'
-//  })
+ $('.make-comment').click((x) => {
+    $(document).find(".make-comment-form")[0].style.display = 'block'
+ })
 
-//  $('.drop-comment').click((x) => {
-//     console.log("click");
-//     comment = $(x.target.parentNode).find('.comment')[0]
-//     if (comment.style.display == 'block'){
-//         comment.style.display = 'none'
-//         x.target.innerHTML = "Comentários &#x25BC;"
-//     } else{
-//         comment.style.display = 'block'
-//         x.target.innerHTML = "Comentários &#x25B2;"
-//     }
-//  })
+ $('.drop-comment').click((x) => {
+    console.log("click");
+    comment = $(x.target.parentNode).find('.comment')[0]
+    if (comment.style.display == 'block'){
+        comment.style.display = 'none'
+        x.target.innerHTML = "Comentários &#x25BC;"
+    } else{
+        comment.style.display = 'block'
+        x.target.innerHTML = "Comentários &#x25B2;"
+    }
+ })
 
 
  loadMarkers()
@@ -100,19 +107,12 @@ $('.cards').hover((x) => {
     $('.other_filters').css('display','none');
  });
 
- getItems('point').then(items => {
-    var services = items;
-
-    services.forEach((element) => {
-        var userRequest = getItemById('usuarios', element.idUsuario).then((item)=> {
-            element.user = item[0];
-        })
-
-        var categoryRequest = getItemById('categories', element.idCategory).then((item)=> {
-            element.category = item[0];
-        })
-
-        console.log(element);
-
-    });
+ getItems('services').then(items => {
+    $('#filter-2').html('');
+    var content = '';
+    console.log(items);
+    items.forEach((element) => {
+        content += '<option value="'+element.id+'">'+element.titulo+'</option>'
+        });
+    $('#filter-2').html(content);
 })
