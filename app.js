@@ -102,8 +102,9 @@ function loadComponent(componentName) {
   }
   
   // Busca todos os itens
-  async function getItems(rota = null) {
-    const response = await fetch(`${API_URL}/${rota}`);
+  async function getItems(rota = null, condition = '') {
+    console.log(condition);
+    const response = await fetch(`${API_URL}/${rota}${condition}`);
     
     if (!response.ok) {
       throw new Error('Erro na busca');

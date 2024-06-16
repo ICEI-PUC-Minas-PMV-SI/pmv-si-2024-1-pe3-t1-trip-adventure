@@ -139,7 +139,7 @@ function loaders(){
  }
 
 
- getItems('point').then(items => {
+getItems('point').then(items => {
     var services = items;
     
     $('.get-points').html(null);

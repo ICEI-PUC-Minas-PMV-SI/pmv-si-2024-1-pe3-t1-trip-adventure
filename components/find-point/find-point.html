@@ -151,6 +151,33 @@
         </div>
 
         <div class="col col-md-10 nob nop">
+          <div class="filters">
+              <div class="nothing"></div>
+              <div class="center-filters">
+                <select name="filter1" id="filter1" class="form-control form-filter">
+                  <option value="" disabled selected>Serviço</option>
+                  <option value="1">Filtro1</option>
+                  <option value="2">Filtro1</option>
+                  <option value="3">Filtro1</option>
+                </select>
+                <select name="filter1" id="filter1" class="form-control form-filter">
+                  <option value="" disabled selected>Classificação</option>
+                  <option value="1">Filtro1</option>
+                  <option value="2">Filtro1</option>
+                  <option value="3">Filtro1</option>
+                </select>
+                <select name="filter1" id="filter1" class="form-control form-filter" >
+                  <option value="" disabled selected>Categoria</option>
+                  <option value="1">Filtro1</option>
+                  <option value="2">Filtro1</option>
+                  <option value="3">Filtro1</option>
+                </select>
+              </div>
+              <div class="back-filters">
+                <a href="#home">Voltar</a>
+              </div>
+
+          </div>
           <div class="map" id="map"></div>
         </div>
       </div>
@@ -163,17 +190,26 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Avaliação</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <label for="denuncia">Descreva sua avaliação</label>
+        <input type="text" name="avaliacao" id="avaliacao" class="form-control">
+        <span id="detail-ranking">
+          <i class="fa fa-star"  aria-hidden="true"></i>
+          <i class="fa fa-star"  aria-hidden="true"></i>
+          <i class="fa fa-star"  aria-hidden="true"></i>
+          <i class="fa fa-star"  aria-hidden="true"></i>
+          <i class="fa fa-star" aria-hidden="true"></i>
+        </span>
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar Avaliação</button>
       </div>
     </div>
   </div>
@@ -184,17 +220,18 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Novo Comentário</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <label for="denuncia">Descreva seu comentário</label>
+        <input type="text" name="comentario" id="comentario" class="form-control">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar Comentário</button>
       </div>
     </div>
   </div>
@@ -205,17 +242,17 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Denúncia</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <label for="denuncia">Digite sua denúncia</label>
+        <input type="text" name="denuncia" id="denuncia" class="form-control text-area">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Denunciar</button>
       </div>
     </div>
   </div>

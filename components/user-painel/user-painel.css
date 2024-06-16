@@ -15,11 +15,11 @@
 
 #page-create-point header a {
   color: var(--title-color);
-  font-weight: bold;
+  font-weight: bold; 
   text-decoration: none;
 
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */ 
 }
 
 #page-create-point header a svg {
@@ -30,7 +30,7 @@
 #page-create-point form {
   margin: 80px auto;
   padding: 30px;
-  max-width: 1000px;
+  max-width: 100%;
   background: #fff;
   border-radius: 8px;
 

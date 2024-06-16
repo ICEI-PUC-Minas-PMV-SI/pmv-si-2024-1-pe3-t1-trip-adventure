@@ -119,7 +119,7 @@ $("#cep").blur(function() {
 function validacoes(){
     var retorno = false;
 
-    $('input').each(function() {
+    $('input,select').each(function() {
         if ($(this).val() === '') {
             $(this).addClass('error-border');
             retorno = true;
@@ -217,3 +217,16 @@ document.querySelector('#btn-cadastro').addEventListener('click', () => {
     }
 
 })
+
+
+getItems('categories').then(items => {
+    $('#category').html('');
+    var content = '<option value="">-- Selecione</option>';
+    console.log(items);
+    items.forEach((element) => {
+        content += '<option value="'+element.id+'">'+element.titulo+'</option>'
+        });
+    $('#category').html(content);
+})
+
+if( !verificaLogin()) window.location.hash = 'login';
