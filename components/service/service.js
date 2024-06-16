@@ -165,6 +165,49 @@ document.querySelector('#btn-cadastro').addEventListener('click', () => {
             var base64String = e.target.result;
 
             objFinal.logo = base64String;
+
+            objFinal.idUsuario = user.id;
+            objFinal.title = $('#title').val();
+            objFinal.link = $('#link').val();
+            objFinal.idCategory = $('#category').val();
+            objFinal.latitude = $('#latitude').val();
+            objFinal.longitude = $('#longitude').val();
+        
+            objFinal.cep = $('#cep').val();
+            objFinal.street = $('#street').val();
+            objFinal.num = $('#num').val();
+            objFinal.neight = $('#neight').val();
+            objFinal.city = $('#city').val();
+            objFinal.uf = $('#uf').val();
+        
+            objFinal.services = [];
+        
+            goodAndBadServices = $('.good-service, .bad-service');
+            goodAndBadServices.each(function() {
+                var id =  $(this).find('i').attr('id');
+                var service = $(this).attr('service');
+                objFinal.services.push({idService: id, quality: service})
+            });
+        
+            objFinal.comments = [];
+            objFinal.complaints = [];
+            objFinal.assessments = [];
+        
+            console.log(objFinal);
+        
+            createItem(objFinal, 'point').then(items => {
+                Toastify({
+                    text: "Criado com sucesso",
+                    duration: 3000,  // Duração em milissegundos
+                    close: true,  // Botão de fechar
+                    gravity: "top",  // Posição: "top" ou "bottom"
+                    position: "right",  // Posição: "left", "center" ou "right"
+                    backgroundColor: "#4CAF50",  // Cor de fundo
+                }).showToast();
+        
+                window.location.hash = '#user-painel';
+          
+                }).catch(error => console.error('Erro:', error));
         };
 
         reader.readAsDataURL(file);
@@ -173,46 +216,4 @@ document.querySelector('#btn-cadastro').addEventListener('click', () => {
         return false;
     }
 
-    objFinal.idUsuario = user.id;
-    objFinal.title = $('#title').val();
-    objFinal.link = $('#link').val();
-    objFinal.idCategory = $('#category').val();
-    objFinal.latitude = $('#latitude').val();
-    objFinal.longitude = $('#longitude').val();
-
-    objFinal.cep = $('#cep').val();
-    objFinal.street = $('#street').val();
-    objFinal.num = $('#num').val();
-    objFinal.neight = $('#neight').val();
-    objFinal.city = $('#city').val();
-    objFinal.uf = $('#uf').val();
-
-    objFinal.services = [];
-
-    goodAndBadServices = $('.good-service, .bad-service');
-    goodAndBadServices.each(function() {
-        var id =  $(this).find('i').attr('id');
-        var service = $(this).attr('service');
-        objFinal.services.push({idService: id, quality: service})
-    });
-
-    objFinal.comments = [];
-    objFinal.complaints = [];
-    objFinal.assessments = [];
-
-    console.log(objFinal);
-
-    createItem(objFinal, 'point').then(items => {
-        Toastify({
-            text: "Criado com sucesso",
-            duration: 3000,  // Duração em milissegundos
-            close: true,  // Botão de fechar
-            gravity: "top",  // Posição: "top" ou "bottom"
-            position: "right",  // Posição: "left", "center" ou "right"
-            backgroundColor: "#4CAF50",  // Cor de fundo
-        }).showToast();
-
-        window.location.hash = '#user-painel';
-  
-        }).catch(error => console.error('Erro:', error));
 })
